@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Vue,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="指令v-text123&amp;lt;span v-text=&amp;quot;msg&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;!-- 和下面的一样 --&amp;gt;&amp;lt;span&amp;gt;&amp;#123;&amp;#123;msg&amp;#125;&amp;#125;&amp;lt;/span&amp;gt; v-html1&amp;lt;div v-html=&amp;quot;html&amp;quot;&amp;gt;&amp;lt;/div&amp;gt; v-show根据表达式之">
+<meta name="keywords" content="Vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue基础语法——命令">
+<meta property="og:url" content="http://yoursite.com/2019/03/11/Vue基础语法—命令/index.html">
+<meta property="og:site_name" content="ThinkerZL">
+<meta property="og:description" content="指令v-text123&amp;lt;span v-text=&amp;quot;msg&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;!-- 和下面的一样 --&amp;gt;&amp;lt;span&amp;gt;&amp;#123;&amp;#123;msg&amp;#125;&amp;#125;&amp;lt;/span&amp;gt; v-html1&amp;lt;div v-html=&amp;quot;html&amp;quot;&amp;gt;&amp;lt;/div&amp;gt; v-show根据表达式之">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-03-11T08:01:20.204Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Vue基础语法——命令">
+<meta name="twitter:description" content="指令v-text123&amp;lt;span v-text=&amp;quot;msg&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;!-- 和下面的一样 --&amp;gt;&amp;lt;span&amp;gt;&amp;#123;&amp;#123;msg&amp;#125;&amp;#125;&amp;lt;/span&amp;gt; v-html1&amp;lt;div v-html=&amp;quot;html&amp;quot;&amp;gt;&amp;lt;/div&amp;gt; v-show根据表达式之">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/03/11/Vue基础语法—命令/">
+
+
+
+
+
+  <title>Vue基础语法——命令 | ThinkerZL</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ThinkerZL</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/11/Vue基础语法—命令/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ThinkerZL">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ThinkerZL">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Vue基础语法——命令</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-11T13:46:37+08:00">
+                2019-03-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Vue/" itemprop="url" rel="index">
+                    <span itemprop="name">Vue</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h1><h2 id="v-text"><a href="#v-text" class="headerlink" title="v-text"></a>v-text</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;span v-text=&quot;msg&quot;&gt;&lt;/span&gt;</span><br><span class="line">&lt;!-- 和下面的一样 --&gt;</span><br><span class="line">&lt;span&gt;&#123;&#123;msg&#125;&#125;&lt;/span&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="v-html"><a href="#v-html" class="headerlink" title="v-html"></a>v-html</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div v-html=&quot;html&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="v-show"><a href="#v-show" class="headerlink" title="v-show"></a>v-show</h2><p>根据表达式之真假值，切换元素的 display CSS 属性。</p>
+<h2 id="v-if"><a href="#v-if" class="headerlink" title="v-if"></a>v-if</h2><p>根据表达式的值的真假条件渲染元素。在切换时元素及它的数据绑定 / 组件被销毁并重建。</p>
+<h2 id="v-else"><a href="#v-else" class="headerlink" title="v-else"></a>v-else</h2><h2 id="v-else-if"><a href="#v-else-if" class="headerlink" title="v-else-if"></a>v-else-if</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;div v-if=&quot;Math.random() &gt; 0.5&quot;&gt;</span><br><span class="line">  Now you see me</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div v-else&gt;</span><br><span class="line">  Now you don&apos;t</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="v-for"><a href="#v-for" class="headerlink" title="v-for"></a>v-for</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div v-for=&quot;item in items&quot;&gt;</span><br><span class="line">  &#123;&#123; item.text &#125;&#125;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="v-on"><a href="#v-on" class="headerlink" title="v-on"></a>v-on</h2><h3 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符"></a>修饰符</h3><ul>
+<li>stop - 调用 event.stopPropagation()，防止冒泡。</li>
+<li>prevent - 调用 event.preventDefault()，阻止元素发生默认的行为（例如，当点击提交按钮时阻止对表单的提交）。</li>
+<li>capture - 添加事件侦听器时使用 capture 模式。</li>
+<li>self - 只当事件是从侦听器绑定的元素本身触发时才触发回调。</li>
+<li>{keyCode | keyAlias} - 只当事件是从特定键触发时才触发回调。</li>
+<li>native - 监听组件根元素的原生事件。</li>
+<li>once - 只触发一次回调。</li>
+<li>left - (2.2.0) 只当点击鼠标左键时触发。</li>
+<li>right - (2.2.0) 只当点击鼠标右键时触发。</li>
+<li>middle - (2.2.0) 只当点击鼠标中键时触发。</li>
+<li>passive - (2.3.0) 以 { passive: true } 模式添加侦听器</li>
+</ul>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 方法处理器 --&gt;</span><br><span class="line">&lt;button v-on:click=&quot;doThis&quot;&gt;&lt;/button&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 动态事件 (2.6.0+) --&gt;</span><br><span class="line">&lt;button v-on:[event]=&quot;doThis&quot;&gt;&lt;/button&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 内联语句 --&gt;</span><br><span class="line">&lt;button v-on:click=&quot;doThat(&apos;hello&apos;, $event)&quot;&gt;&lt;/button&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 缩写 --&gt;</span><br><span class="line">&lt;button @click=&quot;doThis&quot;&gt;&lt;/button&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 动态事件缩写 (2.6.0+) --&gt;</span><br><span class="line">&lt;button @[event]=&quot;doThis&quot;&gt;&lt;/button&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 停止冒泡 --&gt;</span><br><span class="line">&lt;button @click.stop=&quot;doThis&quot;&gt;&lt;/button&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 阻止默认行为 --&gt;</span><br><span class="line">&lt;!-- 提交事件不再重载页面 --&gt;</span><br><span class="line">&lt;button @click.prevent=&quot;doThis&quot;&gt;&lt;/button&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 阻止默认行为，没有表达式 --&gt;</span><br><span class="line">&lt;form @submit.prevent&gt;&lt;/form&gt;</span><br><span class="line"></span><br><span class="line">&lt;!--  串联修饰符 --&gt;</span><br><span class="line">&lt;button @click.stop.prevent=&quot;doThis&quot;&gt;&lt;/button&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 键修饰符，键别名 --&gt;</span><br><span class="line">&lt;input @keyup.enter=&quot;onEnter&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 键修饰符，键代码 --&gt;</span><br><span class="line">&lt;input @keyup.13=&quot;onEnter&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 点击回调只会触发一次 --&gt;</span><br><span class="line">&lt;button v-on:click.once=&quot;doThis&quot;&gt;&lt;/button&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 添加事件监听器时使用事件捕获模式 --&gt;</span><br><span class="line">&lt;!-- 即元素自身触发的事件先在此处理，然后才交由内部元素进行处理 --&gt;</span><br><span class="line">&lt;div v-on:click.capture=&quot;doThis&quot;&gt;...&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 对象语法 (2.4.0+) --&gt;</span><br><span class="line">&lt;button v-on=&quot;&#123; mousedown: doThis, mouseup: doThat &#125;&quot;&gt;&lt;/button&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="v-bind"><a href="#v-bind" class="headerlink" title="v-bind"></a>v-bind</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 绑定一个属性 --&gt;</span><br><span class="line">&lt;img v-bind:src=&quot;imageSrc&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 动态特性名 (2.6.0+) --&gt;</span><br><span class="line">&lt;button v-bind:[key]=&quot;value&quot;&gt;&lt;/button&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 缩写 --&gt;</span><br><span class="line">&lt;img :src=&quot;imageSrc&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 动态特性名缩写 (2.6.0+) --&gt;</span><br><span class="line">&lt;button :[key]=&quot;value&quot;&gt;&lt;/button&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 内联字符串拼接 --&gt;</span><br><span class="line">&lt;img :src=&quot;&apos;/path/to/images/&apos; + fileName&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- class 绑定 --&gt;</span><br><span class="line">&lt;div :class=&quot;&#123; red: isRed &#125;&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;div :class=&quot;[classA, classB]&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;div :class=&quot;[classA, &#123; classB: isB, classC: isC &#125;]&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- style 绑定 --&gt;</span><br><span class="line">&lt;div :style=&quot;&#123; fontSize: size + &apos;px&apos; &#125;&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;div :style=&quot;[styleObjectA, styleObjectB]&quot;&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 绑定一个有属性的对象 --&gt;</span><br><span class="line">&lt;div v-bind=&quot;&#123; id: someProp, &apos;other-attr&apos;: otherProp &#125;&quot;&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 通过 prop 修饰符绑定 DOM 属性 --&gt;</span><br><span class="line">&lt;div v-bind:text-content.prop=&quot;text&quot;&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- prop 绑定。“prop”必须在 my-component 中声明。--&gt;</span><br><span class="line">&lt;my-component :prop=&quot;someThing&quot;&gt;&lt;/my-component&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 通过 $props 将父组件的 props 一起传给子组件 --&gt;</span><br><span class="line">&lt;child-component v-bind=&quot;$props&quot;&gt;&lt;/child-component&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- XLink --&gt;</span><br><span class="line">&lt;svg&gt;&lt;a :xlink:special=&quot;foo&quot;&gt;&lt;/a&gt;&lt;/svg&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="v-model"><a href="#v-model" class="headerlink" title="v-model"></a>v-model</h2><p>在表单控件或者组件上创建双向绑定。</p>
+<p><strong>文本</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;input v-model=&quot;message&quot; placeholder=&quot;edit me&quot;&gt;</span><br><span class="line">&lt;p&gt;Message is: &#123;&#123; message &#125;&#125;&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>复选框</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&apos;example-3&apos;&gt;</span><br><span class="line">  &lt;input type=&quot;checkbox&quot; id=&quot;jack&quot; value=&quot;Jack&quot; v-model=&quot;checkedNames&quot;&gt;</span><br><span class="line">  &lt;label for=&quot;jack&quot;&gt;Jack&lt;/label&gt;</span><br><span class="line">  &lt;input type=&quot;checkbox&quot; id=&quot;john&quot; value=&quot;John&quot; v-model=&quot;checkedNames&quot;&gt;</span><br><span class="line">  &lt;label for=&quot;john&quot;&gt;John&lt;/label&gt;</span><br><span class="line">  &lt;input type=&quot;checkbox&quot; id=&quot;mike&quot; value=&quot;Mike&quot; v-model=&quot;checkedNames&quot;&gt;</span><br><span class="line">  &lt;label for=&quot;mike&quot;&gt;Mike&lt;/label&gt;</span><br><span class="line">  &lt;br&gt;</span><br><span class="line">  &lt;span&gt;Checked names: &#123;&#123; checkedNames &#125;&#125;&lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">  new Vue(&#123;</span><br><span class="line">  el: &apos;#example-3&apos;,</span><br><span class="line">  data: &#123;</span><br><span class="line">    checkedNames: []</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>单选按钮</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;example-4&quot;&gt;</span><br><span class="line">  &lt;input type=&quot;radio&quot; id=&quot;one&quot; value=&quot;One&quot; v-model=&quot;picked&quot;&gt;</span><br><span class="line">  &lt;label for=&quot;one&quot;&gt;One&lt;/label&gt;</span><br><span class="line">  &lt;br&gt;</span><br><span class="line">  &lt;input type=&quot;radio&quot; id=&quot;two&quot; value=&quot;Two&quot; v-model=&quot;picked&quot;&gt;</span><br><span class="line">  &lt;label for=&quot;two&quot;&gt;Two&lt;/label&gt;</span><br><span class="line">  &lt;br&gt;</span><br><span class="line">  &lt;span&gt;Picked: &#123;&#123; picked &#125;&#125;&lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">  new Vue(&#123;</span><br><span class="line">    el: &apos;#example-4&apos;,</span><br><span class="line">    data: &#123;</span><br><span class="line">      picked: &apos;&apos;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<p><strong>选择框</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;example-5&quot;&gt;</span><br><span class="line">  &lt;select v-model=&quot;selected&quot;&gt;</span><br><span class="line">    &lt;option disabled value=&quot;&quot;&gt;请选择&lt;/option&gt;</span><br><span class="line">    &lt;option&gt;A&lt;/option&gt;</span><br><span class="line">    &lt;option&gt;B&lt;/option&gt;</span><br><span class="line">    &lt;option&gt;C&lt;/option&gt;</span><br><span class="line">  &lt;/select&gt;</span><br><span class="line">  &lt;span&gt;Selected: &#123;&#123; selected &#125;&#125;&lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">  new Vue(&#123;</span><br><span class="line">    el: &apos;...&apos;,</span><br><span class="line">    data: &#123;</span><br><span class="line">      selected: &apos;&apos;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<p><em>用v-for渲染</em><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;select v-model=&quot;selected&quot;&gt;</span><br><span class="line">  &lt;option v-for=&quot;option in options&quot; v-bind:value=&quot;option.value&quot;&gt;</span><br><span class="line">    &#123;&#123; option.text &#125;&#125;</span><br><span class="line">  &lt;/option&gt;</span><br><span class="line">&lt;/select&gt;</span><br><span class="line">&lt;span&gt;Selected: &#123;&#123; selected &#125;&#125;&lt;/span&gt;</span><br><span class="line">new Vue(&#123;</span><br><span class="line">  el: &apos;...&apos;,</span><br><span class="line">  data: &#123;</span><br><span class="line">    selected: &apos;A&apos;,</span><br><span class="line">    options: [</span><br><span class="line">      &#123; text: &apos;One&apos;, value: &apos;A&apos; &#125;,</span><br><span class="line">      &#123; text: &apos;Two&apos;, value: &apos;B&apos; &#125;,</span><br><span class="line">      &#123; text: &apos;Three&apos;, value: &apos;C&apos; &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p><strong>修饰符</strong></p>
+<ul>
+<li>.lazy<br>在默认情况下，v-model 在每次 input 事件触发后将输入框的值与数据进行同步 (除了上述输入法组合文字时)。你可以添加 lazy 修饰符，从而转变为使用 change 事件进行同步</li>
+</ul>
+<ul>
+<li>.number<br>自动将用户的输入值转为数值类型</li>
+</ul>
+<ul>
+<li>.trim<br>自动过滤用户输入的首尾空白字符</li>
+</ul>
+<h2 id="v-slot"><a href="#v-slot" class="headerlink" title="v-slot"></a>v-slot</h2><h2 id="v-pre"><a href="#v-pre" class="headerlink" title="v-pre"></a>v-pre</h2><p>跳过这个元素和它的子元素的编译过程。可以用来显示原始 Mustache 标签。跳过大量没有指令的节点会加快编译。</p>
+<h2 id="v-cloak"><a href="#v-cloak" class="headerlink" title="v-cloak"></a>v-cloak</h2><p>这个指令保持在元素上直到关联实例结束编译<br>css:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[v-cloak] &#123;</span><br><span class="line">  display: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>html<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div v-cloak&gt;</span><br><span class="line">  &#123;&#123; message &#125;&#125;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<h2 id="v-once"><a href="#v-once" class="headerlink" title="v-once"></a>v-once</h2><p>只渲染元素和组件一次。随后的重新渲染，元素/组件及其所有的子节点将被视为静态内容并跳过。这可以用于优化更新性能。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Vue/" rel="tag"># Vue</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/11/Vue基础语法—组件/" rel="next" title="Vue基础语法——组件">
+                <i class="fa fa-chevron-left"></i> Vue基础语法——组件
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/12/动态路由配置/" rel="prev" title="动态路由配置">
+                动态路由配置 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/head.jpg" alt="ThinkerZL">
+            
+              <p class="site-author-name" itemprop="name">ThinkerZL</p>
+              <p class="site-description motion-element" itemprop="description">静若止水，动若脱兔</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Leoisfool" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:zhonglililia@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://blog.csdn.net/qq_37331119" target="_blank" title="CSDN">
+                      
+                        <i class="fa fa-fw fa-globe"></i>CSDN</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#指令"><span class="nav-number">1.</span> <span class="nav-text">指令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#v-text"><span class="nav-number">1.1.</span> <span class="nav-text">v-text</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#v-html"><span class="nav-number">1.2.</span> <span class="nav-text">v-html</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#v-show"><span class="nav-number">1.3.</span> <span class="nav-text">v-show</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#v-if"><span class="nav-number">1.4.</span> <span class="nav-text">v-if</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#v-else"><span class="nav-number">1.5.</span> <span class="nav-text">v-else</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#v-else-if"><span class="nav-number">1.6.</span> <span class="nav-text">v-else-if</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#v-for"><span class="nav-number">1.7.</span> <span class="nav-text">v-for</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#v-on"><span class="nav-number">1.8.</span> <span class="nav-text">v-on</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#修饰符"><span class="nav-number">1.8.1.</span> <span class="nav-text">修饰符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#示例"><span class="nav-number">1.8.2.</span> <span class="nav-text">示例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#v-bind"><span class="nav-number">1.9.</span> <span class="nav-text">v-bind</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#v-model"><span class="nav-number">1.10.</span> <span class="nav-text">v-model</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#v-slot"><span class="nav-number">1.11.</span> <span class="nav-text">v-slot</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#v-pre"><span class="nav-number">1.12.</span> <span class="nav-text">v-pre</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#v-cloak"><span class="nav-number">1.13.</span> <span class="nav-text">v-cloak</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#v-once"><span class="nav-number">1.14.</span> <span class="nav-text">v-once</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ThinkerZL</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
