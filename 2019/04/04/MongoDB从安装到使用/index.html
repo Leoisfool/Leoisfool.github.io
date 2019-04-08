@@ -79,18 +79,23 @@
 
 
 
-<meta name="description" content="MongoDB概述 MongoDB’s flexible document data model makes working with data intuitive, whether you’re building an app from scratch or updating an existing one.MongoDB灵活的文件数据模型使得处理数据更加直观，无论您是新建一个程序或是更新现有的">
+<meta name="description" content="MongoDB概述MongoDB 是一个基于分布式文件存储的数据库。由 C++ 语言编写。旨在为 WEB 应用提供可扩展的高性能数据存储解决方案。MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。来源 下载下载地址：https://www.mongodb.com/download-center/community 安装 配置在D盘（或其他">
 <meta name="keywords" content="MongoDB,DataBase">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MongoDB从安装到使用">
 <meta property="og:url" content="http://yoursite.com/2019/04/04/MongoDB从安装到使用/index.html">
 <meta property="og:site_name" content="ThinkerZL">
-<meta property="og:description" content="MongoDB概述 MongoDB’s flexible document data model makes working with data intuitive, whether you’re building an app from scratch or updating an existing one.MongoDB灵活的文件数据模型使得处理数据更加直观，无论您是新建一个程序或是更新现有的">
+<meta property="og:description" content="MongoDB概述MongoDB 是一个基于分布式文件存储的数据库。由 C++ 语言编写。旨在为 WEB 应用提供可扩展的高性能数据存储解决方案。MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。来源 下载下载地址：https://www.mongodb.com/download-center/community 安装 配置在D盘（或其他">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-04T13:24:31.202Z">
+<meta property="og:image" content="http://yoursite.com/2019/04/04/MongoDB从安装到使用/1.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/04/MongoDB从安装到使用/2.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/04/MongoDB从安装到使用/5.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/04/MongoDB从安装到使用/3.png">
+<meta property="og:updated_time" content="2019-04-08T15:59:35.466Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MongoDB从安装到使用">
-<meta name="twitter:description" content="MongoDB概述 MongoDB’s flexible document data model makes working with data intuitive, whether you’re building an app from scratch or updating an existing one.MongoDB灵活的文件数据模型使得处理数据更加直观，无论您是新建一个程序或是更新现有的">
+<meta name="twitter:description" content="MongoDB概述MongoDB 是一个基于分布式文件存储的数据库。由 C++ 语言编写。旨在为 WEB 应用提供可扩展的高性能数据存储解决方案。MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。来源 下载下载地址：https://www.mongodb.com/download-center/community 安装 配置在D盘（或其他">
+<meta name="twitter:image" content="http://yoursite.com/2019/04/04/MongoDB从安装到使用/1.png">
 
 
 
@@ -363,10 +368,20 @@
       
 
       
-        <h2 id="MongoDB概述"><a href="#MongoDB概述" class="headerlink" title="MongoDB概述"></a>MongoDB概述</h2><ul>
-<li>MongoDB’s flexible document data model makes working with data intuitive, whether you’re building an app from scratch or updating an existing one.<br>MongoDB灵活的文件数据模型使得处理数据更加直观，无论您是新建一个程序或是更新现有的应用程序。</li>
-<li>MongoDB lets you precisely control where data is placed globally so you can easily ensure fast performance anywhere and compliance with regulations.</li>
-</ul>
+        <h2 id="MongoDB概述"><a href="#MongoDB概述" class="headerlink" title="MongoDB概述"></a>MongoDB概述</h2><p>MongoDB 是一个基于分布式文件存储的数据库。由 C++ 语言编写。旨在为 WEB 应用提供可扩展的高性能数据存储解决方案。<br>MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。<br><a href="http://www.runoob.com/mongodb/mongodb-tutorial.html" target="_blank" rel="noopener">来源</a></p>
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>下载地址：<a href="https://www.mongodb.com/download-center/community" target="_blank" rel="noopener">https://www.mongodb.com/download-center/community</a></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p><img src="/2019/04/04/MongoDB从安装到使用/1.png" alt="1"></p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>在D盘（或其他盘）新建文件夹MongoDB，文件夹中再新建三个文件夹，分别为db、logs、etc,它们分别用于存储数据库、日志和配置文件，如图：<br><img src="/2019/04/04/MongoDB从安装到使用/2.png" alt="2"></p>
+<p>mongo.conf内容为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">#数据库路径</span><br><span class="line">dbpath=D:\MongoDB\db</span><br><span class="line"></span><br><span class="line">#日志输出文件路径</span><br><span class="line">logpath=D:\MongoDB\logs\mongo.log</span><br><span class="line"></span><br><span class="line">#错误日志采用追加模式，配置这个选项后mongodb的日志会追加到现有的日志文件，而不是从新创建一个新文件</span><br><span class="line">logappend=true</span><br><span class="line"></span><br><span class="line">#启用日志文件，默认启用</span><br><span class="line">journal=true</span><br><span class="line"></span><br><span class="line">#这个选项可以过滤掉一些无用的日志信息，若需要调试使用请设置为false</span><br><span class="line">quiet=false</span><br><span class="line"></span><br><span class="line">#端口号 默认为27017</span><br><span class="line">port=27017</span><br><span class="line"></span><br><span class="line">#指定存储引擎（默认先不加此引擎，如果报错了，大家在加进去）</span><br><span class="line">#storageEngine=mmapv1</span><br></pre></td></tr></table></figure></p>
+<p>在logs文件夹下新建文件mongo.log</p>
+<h2 id="通过配置文件的形式启动MongoDB，同时安装到window服务中"><a href="#通过配置文件的形式启动MongoDB，同时安装到window服务中" class="headerlink" title="通过配置文件的形式启动MongoDB，同时安装到window服务中"></a>通过配置文件的形式启动MongoDB，同时安装到window服务中</h2><h3 id="1、进入mongodb的安装目录下面的bin目录中"><a href="#1、进入mongodb的安装目录下面的bin目录中" class="headerlink" title="1、进入mongodb的安装目录下面的bin目录中"></a>1、进入mongodb的安装目录下面的bin目录中</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd c:\Program Files\MongoDB\Server\3.2\bin&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="2、输入命令，启动mongo，并将其写入到本地服务中"><a href="#2、输入命令，启动mongo，并将其写入到本地服务中" class="headerlink" title="2、输入命令，启动mongo，并将其写入到本地服务中"></a>2、输入命令，启动mongo，并将其写入到本地服务中</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongod --config c:\MongoDB\etc\mongo.conf --install --serviceName &quot;MongoDB&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="3、配置环境变量"><a href="#3、配置环境变量" class="headerlink" title="3、配置环境变量"></a>3、配置环境变量</h3><p>在系统变量path中添加C:\Program Files\MongoDB\Server\4.0\bin<br><img src="/2019/04/04/MongoDB从安装到使用/5.png" alt="5"></p>
+<h2 id="启动方式"><a href="#启动方式" class="headerlink" title="启动方式"></a>启动方式</h2><h3 id="1、查看本地服务，启动mongo"><a href="#1、查看本地服务，启动mongo" class="headerlink" title="1、查看本地服务，启动mongo"></a>1、查看本地服务，启动mongo</h3><p><img src="/2019/04/04/MongoDB从安装到使用/3.png" alt="3"></p>
+<h3 id="2、打开cmd-在bin目录下进入cmd"><a href="#2、打开cmd-在bin目录下进入cmd" class="headerlink" title="2、打开cmd,在bin目录下进入cmd"></a>2、打开cmd,在bin目录下进入cmd</h3><p>输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongod --dbpath c:\MongoDB\data</span><br></pre></td></tr></table></figure></p>
+<p>再打开一个cmd,输入<code>mongo</code></p>
+<p>在浏览器中打开<a href="http://localhost:27017" target="_blank" rel="noopener">http://localhost:27017</a> 查看是否启动成功。</p>
+<h3 id="通过更改环境变量的方式打开目前没有测试成功，未完待续"><a href="#通过更改环境变量的方式打开目前没有测试成功，未完待续" class="headerlink" title="通过更改环境变量的方式打开目前没有测试成功，未完待续~"></a>通过更改环境变量的方式打开目前没有测试成功，未完待续~</h3><p><a href="http://www.imooc.com/article/18438" target="_blank" rel="noopener">参考imooc</a></p>
 
       
     </div>
@@ -424,8 +439,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/04/07/重装系统后HEXO博客修复 /" rel="prev" title="重装系统后HEXO博客修复">
-                重装系统后HEXO博客修复 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/04/07/重装系统后HEXO的恢复/" rel="prev" title="重装系统后HEXO的恢复">
+                重装系统后HEXO的恢复 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -505,7 +520,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-count">31</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -582,7 +597,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB概述"><span class="nav-number">1.</span> <span class="nav-text">MongoDB概述</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB概述"><span class="nav-number">1.</span> <span class="nav-text">MongoDB概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载"><span class="nav-number">2.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">3.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置"><span class="nav-number">4.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通过配置文件的形式启动MongoDB，同时安装到window服务中"><span class="nav-number">5.</span> <span class="nav-text">通过配置文件的形式启动MongoDB，同时安装到window服务中</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、进入mongodb的安装目录下面的bin目录中"><span class="nav-number">5.1.</span> <span class="nav-text">1、进入mongodb的安装目录下面的bin目录中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、输入命令，启动mongo，并将其写入到本地服务中"><span class="nav-number">5.2.</span> <span class="nav-text">2、输入命令，启动mongo，并将其写入到本地服务中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、配置环境变量"><span class="nav-number">5.3.</span> <span class="nav-text">3、配置环境变量</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启动方式"><span class="nav-number">6.</span> <span class="nav-text">启动方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、查看本地服务，启动mongo"><span class="nav-number">6.1.</span> <span class="nav-text">1、查看本地服务，启动mongo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、打开cmd-在bin目录下进入cmd"><span class="nav-number">6.2.</span> <span class="nav-text">2、打开cmd,在bin目录下进入cmd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通过更改环境变量的方式打开目前没有测试成功，未完待续"><span class="nav-number">6.3.</span> <span class="nav-text">通过更改环境变量的方式打开目前没有测试成功，未完待续~</span></a></li></ol></li></ol></div>
             
 
           </div>
