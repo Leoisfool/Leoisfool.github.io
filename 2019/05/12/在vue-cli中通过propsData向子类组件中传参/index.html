@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="日记,">
+  <meta name="keywords" content="Vue,vue-cli,extend,propsData,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="今日小结今天学会了把bootstrap引入vue-cli中，但是下午和晚上都迷茫不知所措，不知到怎么用nodejs搭建后台，以及vue-cli学得还并不熟。毕设要做一个基于Vue的页面生成系统，但是到底是一个什么样的生成，生成什么，如何生成，现在还没有构思好。还是应该一步一个脚印，不能好高骛远，抓实基础，先做好前台，再做后台。好久没有做项很多东西都已经忘了 明日任务github的使用、找到vue-">
-<meta name="keywords" content="日记">
+<meta name="description" content="背景我在写一个网页生成系统时需要将footer动态的添加到页面中，并且将userName传到footer组件中 步骤在components下新建Myfooter.vue,核心内容如下123456789101112131415&amp;lt;template&amp;gt;  &amp;lt;div class=&amp;quot;footer&amp;quot;&amp;gt;    &amp;lt;div&amp;gt; © 2019 &amp;lt;/div&amp;gt">
+<meta name="keywords" content="Vue,vue-cli,extend,propsData">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HELLO,HEXO">
-<meta property="og:url" content="http://yoursite.com/2019/01/28/日记2019-03-06/index.html">
+<meta property="og:title" content="在vue-cli中通过propsData向子类组件中传参">
+<meta property="og:url" content="http://yoursite.com/2019/05/12/在vue-cli中通过propsData向子类组件中传参/index.html">
 <meta property="og:site_name" content="ThinkerZL">
-<meta property="og:description" content="今日小结今天学会了把bootstrap引入vue-cli中，但是下午和晚上都迷茫不知所措，不知到怎么用nodejs搭建后台，以及vue-cli学得还并不熟。毕设要做一个基于Vue的页面生成系统，但是到底是一个什么样的生成，生成什么，如何生成，现在还没有构思好。还是应该一步一个脚印，不能好高骛远，抓实基础，先做好前台，再做后台。好久没有做项很多东西都已经忘了 明日任务github的使用、找到vue-">
+<meta property="og:description" content="背景我在写一个网页生成系统时需要将footer动态的添加到页面中，并且将userName传到footer组件中 步骤在components下新建Myfooter.vue,核心内容如下123456789101112131415&amp;lt;template&amp;gt;  &amp;lt;div class=&amp;quot;footer&amp;quot;&amp;gt;    &amp;lt;div&amp;gt; © 2019 &amp;lt;/div&amp;gt">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-06T13:13:21.513Z">
+<meta property="og:updated_time" content="2019-05-12T08:13:02.131Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HELLO,HEXO">
-<meta name="twitter:description" content="今日小结今天学会了把bootstrap引入vue-cli中，但是下午和晚上都迷茫不知所措，不知到怎么用nodejs搭建后台，以及vue-cli学得还并不熟。毕设要做一个基于Vue的页面生成系统，但是到底是一个什么样的生成，生成什么，如何生成，现在还没有构思好。还是应该一步一个脚印，不能好高骛远，抓实基础，先做好前台，再做后台。好久没有做项很多东西都已经忘了 明日任务github的使用、找到vue-">
+<meta name="twitter:title" content="在vue-cli中通过propsData向子类组件中传参">
+<meta name="twitter:description" content="背景我在写一个网页生成系统时需要将footer动态的添加到页面中，并且将userName传到footer组件中 步骤在components下新建Myfooter.vue,核心内容如下123456789101112131415&amp;lt;template&amp;gt;  &amp;lt;div class=&amp;quot;footer&amp;quot;&amp;gt;    &amp;lt;div&amp;gt; © 2019 &amp;lt;/div&amp;gt">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/01/28/日记2019-03-06/">
+  <link rel="canonical" href="http://yoursite.com/2019/05/12/在vue-cli中通过propsData向子类组件中传参/">
 
 
 
 
 
-  <title>HELLO,HEXO | ThinkerZL</title>
+  <title>在vue-cli中通过propsData向子类组件中传参 | ThinkerZL</title>
   
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/28/日记2019-03-06/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/12/在vue-cli中通过propsData向子类组件中传参/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ThinkerZL">
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">HELLO,HEXO</h1>
+          <h1 class="post-title" itemprop="name headline">在vue-cli中通过propsData向子类组件中传参</h1>
         
 
         <div class="post-meta">
@@ -292,8 +292,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-28T02:10:53+08:00">
-                2019-01-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-12T15:49:48+08:00">
+                2019-05-12
               </time>
             
 
@@ -315,8 +315,19 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/日记/" itemprop="url" rel="index">
-                    <span itemprop="name">日记</span>
+                  <a href="/categories/Vue/" itemprop="url" rel="index">
+                    <span itemprop="name">Vue</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Vue/vue-cli/" itemprop="url" rel="index">
+                    <span itemprop="name">vue-cli</span>
                   </a>
                 </span>
 
@@ -352,10 +363,11 @@
       
 
       
-        <h2 id="今日小结"><a href="#今日小结" class="headerlink" title="今日小结"></a>今日小结</h2><p>今天学会了把bootstrap引入vue-cli中，但是下午和晚上都迷茫不知所措，不知到怎么用nodejs搭建后台，以及vue-cli学得还并不熟。毕设要做一个基于Vue的页面生成系统，但是到底是一个什么样的生成，生成什么，如何生成，现在还没有构思好。<br>还是应该一步一个脚印，不能好高骛远，抓实基础，先做好前台，再做后台。<br>好久没有做项很多东西都已经忘了</p>
-<h2 id="明日任务"><a href="#明日任务" class="headerlink" title="明日任务"></a>明日任务</h2><p>github的使用、找到vue-cli搭建项目的基础知识以及开始学习、hexo如何让日记只有我才能看见即权限设置</p>
-<p>应写博客github的使用、找到vue-cli搭建项目的基础知识</p>
-<h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><p>6天vue<br>6天nodejs<br>12开发项目</p>
+        <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>我在写一个网页生成系统时需要将footer<strong>动态的添加</strong>到页面中，并且将userName传到footer组件中</p>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="在components下新建Myfooter-vue-核心内容如下"><a href="#在components下新建Myfooter-vue-核心内容如下" class="headerlink" title="在components下新建Myfooter.vue,核心内容如下"></a>在components下新建Myfooter.vue,核心内容如下</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div class=&quot;footer&quot;&gt;</span><br><span class="line">    &lt;div&gt; © 2019 &lt;/div&gt;</span><br><span class="line">    &lt;div&gt;&lt;i class=&quot;el-icon-reading&quot;&gt;&lt;/i&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div&gt;&lt;i class=&quot;el-icon-user-solid&quot;&gt;&lt;/i&gt;&#123;&#123; userName &#125;&#125;&lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  props: [&apos;userName&apos;]</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br></pre></td></tr></table></figure>
+<p>这里希望从父组件获得userName的值</p>
+<h3 id="在另一个文件中引用footer"><a href="#在另一个文件中引用footer" class="headerlink" title="在另一个文件中引用footer"></a>在另一个文件中引用footer</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">  import Vue from &apos;vue&apos;</span><br><span class="line">  import VFooter from &apos;@/pieces/WPFooter&apos;</span><br><span class="line">  export default &#123;</span><br><span class="line">    methods: &#123;</span><br><span class="line">      addFooter () &#123;</span><br><span class="line">        let Footer = Vue.extend(VFooter)</span><br><span class="line">          let newFooter = new Footer(&#123;</span><br><span class="line">            propsData: &#123;</span><br><span class="line">              userName: this.userName</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;).$mount()</span><br><span class="line">          // position为需要挂在到的地方</span><br><span class="line">          document.getElementById(position).appendChild(newFooter.$el)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p><a href="https://cn.vuejs.org/v2/api/#Vue-extend" target="_blank" rel="noopener">关于extend的官网API</a></p>
 
       
     </div>
@@ -373,7 +385,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/日记/" rel="tag"># 日记</a>
+            <a href="/tags/Vue/" rel="tag"># Vue</a>
+          
+            <a href="/tags/vue-cli/" rel="tag"># vue-cli</a>
+          
+            <a href="/tags/extend/" rel="tag"># extend</a>
+          
+            <a href="/tags/propsData/" rel="tag"># propsData</a>
           
         </div>
       
@@ -401,8 +419,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/28/Vue——自定义指令/" rel="next" title="Vue——自定义指令">
-                <i class="fa fa-chevron-left"></i> Vue——自定义指令
+              <a href="/2019/04/21/全局拦截/" rel="next" title="全局登录拦截">
+                <i class="fa fa-chevron-left"></i> 全局登录拦截
               </a>
             
           </div>
@@ -410,10 +428,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/01/28/清除浮动/" rel="prev" title="清除浮动">
-                清除浮动 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -569,7 +583,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#今日小结"><span class="nav-number">1.</span> <span class="nav-text">今日小结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#明日任务"><span class="nav-number">2.</span> <span class="nav-text">明日任务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#目标"><span class="nav-number">3.</span> <span class="nav-text">目标</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#步骤"><span class="nav-number">2.</span> <span class="nav-text">步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#在components下新建Myfooter-vue-核心内容如下"><span class="nav-number">2.1.</span> <span class="nav-text">在components下新建Myfooter.vue,核心内容如下</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在另一个文件中引用footer"><span class="nav-number">2.2.</span> <span class="nav-text">在另一个文件中引用footer</span></a></li></ol></li></ol></div>
             
 
           </div>
